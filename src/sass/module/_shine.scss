@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 光の疑似要素 */
+.shine {
+  &::after {
+    display: block;
+    width: 140%;
+    height: 100%;
+    background: #ffffff;
+    opacity: .5;
+    z-index: 2;
+    top: 0;
+    left: -160%;
+    content: "";
+    position: absolute;
+    transform: skewX(-45deg);
+    animation: shine 3s cubic-bezier(0.25, 0, 0.25, 1) infinite;
+  }
+
+  &:focus::after,
+  &:hover::after {
+    display: none;
+  }
+}
+
+/* 光の動き */
+@keyframes shine {
+  0% {
+    left: -160%;
+    opacity: 0;
+  }
+
+  70% {
+    left: -160%;
+    opacity: 0.5;
+  }
+
+  71% {
+    left: -160%;
+    opacity: 1;
+  }
+
+  100% {
+    left: -20%;
+    opacity: 0;
+  }
+}

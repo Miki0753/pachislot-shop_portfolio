@@ -1,0 +1,78 @@
+@use "global" as *;
+
+.header {
+	background-color: transparent;
+	padding: 0;
+	position: fixed; 
+	top: 0;
+	left: 0;
+	width: 100%; //positionすると浮いて幅がなくなるのを解消する
+	height: $header-height-sp;
+	z-index: $layer-header;
+	transition: background-color ease .3s, height ease .3s;
+	
+	@include mq('md') {
+		height: $header-height-md;
+	}
+	
+	@include mq('lg') {
+		height: $header-height-pc;
+	}
+
+	&.change-small {
+			background-color: rgba(#ffffff, 0.8);
+			height: 100px;
+		}
+}
+
+.header__inner {
+		width: 100%;
+		height: inherit;
+		padding-right: $padding-sp;
+		padding-left: $padding-sp;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+
+		@include mq("md") {
+			max-width: 1596px + strip-unit($padding-pc) * 2;
+			padding-right: $padding-pc;
+			padding-left: $padding-pc;
+		}
+}
+
+.header__logo {
+	transition: width ease .3s;
+	
+	@include mq('lg') {
+		padding-top: 10px;
+		margin-right: auto;
+	}
+
+	&.change-small {
+		width: rem(190);
+
+		@include mq('lg') {
+			width: rem(200);
+		}
+	}
+}
+
+.header-nav {
+	display: none;
+
+	@include mq('lg') {
+		display: block;
+		margin-right: 5.38485%;
+	}
+}
+
+.header-cta {
+	display: none;
+
+	@include mq('lg') {
+		display: block;
+		margin-right: rem(23);
+	}
+}

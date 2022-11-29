@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.btn-sm {
+  display: inline-block;
+  width: rem(183);
+  max-width: 100%;
+  padding: rem(8) rem(10);
+  border: 2px solid transparent;
+  background: #268582;
+  color: #ffffff;
+  font-size: rem(18);
+  font-family: $font-family-english;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: .015em;
+  line-height: 1;
+  border-radius: 100vh;
+  text-align: center;
+}
+
+/* シェブロン */
+.btn-sm__arrow {
+  position: relative;
+
+  &::after {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: rem(8);
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 6.7%;
+    transform: translateY(-50%);
+    transition: ease .2s;
+    z-index: 3;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    right: 5.6%;
+  }
+}
+
+.btn-sm__arrow {
+  &::after {
+    content: '\f054';
+  }
+}

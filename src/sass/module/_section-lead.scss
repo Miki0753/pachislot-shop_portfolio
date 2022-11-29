@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.section__lead {
+  font-family: zen-maru-gothic, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.45;
+  color: $color-text-base;
+
+  @include mq('md') {
+    font-size: 30px;
+  }
+
+  @include mq('xl') {
+    font-size: 42px;
+  }
+}
+
+/* 大きめ・色違い */
+.section__lead_lg {
+  font-size: 30px;
+  line-height: 1.13;
+  color: #fff;
+
+  @include mq('md') {
+    font-size: 40px;
+  }
+
+  @include mq('xl') {
+    font-size: 59.65px;
+  }
+}

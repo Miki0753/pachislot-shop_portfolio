@@ -1,0 +1,169 @@
+@use "global" as *;
+.company {
+  padding-bottom: 68px;
+  position: relative;
+}
+
+/* 斜線の背景 */
+.company-deco {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  width: 55.7222vw;
+  height: 100%;
+  z-index: -1;
+  
+  @include mq('md') {
+    width: 25.7222vw;
+    top: 160px;
+  }
+
+  @include mq('lg') {
+    top: 0;
+  }
+}
+
+.company__inner {
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  width: 100%;
+  position: relative;
+
+  @include mq('sm') {
+    max-width: 600px + strip-unit($padding-pc) * 2;
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+
+  @include mq('lg') {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* キャラクター配置 */
+.company-anime {
+  width: 24.25vw;
+  height: 26.63vw;
+  position: absolute;
+  bottom: 0vw;
+  left: 31vw;
+  z-index: 2;
+
+  @include mq('sm') {
+    width: 18.188vw;
+    height: 19.978vw;
+    bottom: -4vw;
+    left: 31vw;
+  }
+
+  @include mq('md') {
+    width: 23.03vw;
+    height: 25.3vw;
+    bottom: -9vw;
+    left: 30vw;
+  }
+
+  @include mq('lg') {
+    width: 11.28vw;
+    height: 12.39vw;
+    top: 328px;
+    left: 16vw;
+  }
+
+  @media screen and (min-width: 1550px) {
+    left: 23vw;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}  
+
+/* グレーの背景 */
+.company-media__body-bg {
+  z-index: -2;
+  background-color: #f3f3f3;
+  border-top-right-radius: 40px;
+  position: absolute;
+  width: 90%;
+  height: 62%;
+  top: 10%;
+  left: 0;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+
+  @include mq('md') {
+    width: 100%;
+    height: 58%;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 110%;
+  }
+  
+  @include mq('lg') {
+    width: 59.05555%;
+    height: 86%;
+    top: 19.57475%;
+    left: 33.94444%;
+    border-top-right-radius: 110px;
+  }
+  
+  @include mq('xl') {
+    border-top-right-radius: 150px;
+    width: 59.05555%;
+  }
+  
+  @media screen and (min-width: 1650px) {
+    height: 503px;
+  }
+}
+
+.company-media__img-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+  aspect-ratio: 53 / 40;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  @include mq('lg') {
+    flex: 0 1 29.44444%;
+    height: 400px;
+    margin-right: 6.38888%;
+    margin-left: 9%;
+  }
+  
+  @include mq('xl') {
+    flex: 0 1 29.44444%;
+    margin-left: 16.33333%;
+  }
+}
+
+.company__section-title {
+  //margin-bottom: 0;
+}
+
+.company-btn {
+  padding-left: 0;
+  
+}
+
+.company__media-text {
+  width: calc(85% + 16px);
+
+@media screen and (min-width: 650px) {
+    width: 78%;
+}
+
+  @include mq('xl') {
+    width: 100%;
+    padding-right: 66px;
+  }
+}

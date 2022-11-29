@@ -1,0 +1,46 @@
+@use "global" as *;
+.global-nav {
+}
+
+.global-nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.global-nav__item {
+
+  &:not(:last-child) {
+
+    @include mq('lg') {
+      margin-right: 20px;
+    }
+
+    @include mq('xl') {
+      margin-right: 38px;
+    }
+  }
+}
+
+.global-nav__link {
+  font-family: zen-maru-gothic, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #010101;
+  display: block;
+  line-height: $header-height-sp;
+  transition: all 0.3s ease 0s;
+
+  @include mq('md') {
+    line-height: $header-height-md;
+    font-size: 18px;
+  }
+  
+  @include mq('lg') {
+    line-height: $header-height-pc;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
+}

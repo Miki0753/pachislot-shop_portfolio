@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>Test Cording</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta name="robots" content="noindex,follow" />
+  <!-- ファビコン -->
+  <link rel="icon" href="./images/common/favicon.ico" id="favicon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Swiper css -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- WOW -->
+  <link rel="stylesheet" href="./css/animate.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo logo"><a href="#"><img src="./images/common/logo.png" alt="株式会社ACE"></a></h1>
+      <nav nav class="header-nav global-nav" aria-label="header">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#mission">ACEとは</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#service">事業内容</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#works">制作実績</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#company">会社概要</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#recruit">採用情報</a></li>
+        </ul>
+      </nav><!-- header-nav -->
+      <div class="header-cta">
+        <a href="#contact" class="cta cta_contact cta_contact-icon shine">CONTACT</a>
+      </div><!-- header-cta -->
+    </div><!-- header__inner -->
+  </header>
+  
+  <!-- ドロワーのバー部分 -->
+  <div class="js-drawer-icon">
+    <div class="js-drawer-icon__bars">
+      <div class="js-drawer-icon__bar1"></div>
+      <div class="js-drawer-icon__bar2"></div>
+      <div class="js-drawer-icon__bar3"></div>
+    </div>
+  </div><!-- js-drawer-icon -->
+  <!-- ドロワーメニュー部分 -->
+  <div class="js-drawer-content">
+    <div class="js-drawer-content__items">
+      <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#mission">ACEとは</a></div>
+      <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#service">事業内容</a></div>
+      <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#works">制作実績</a></div>
+      <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#company">会社概要</a></div>
+      <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#recruit">採用情報</a></div>
+      <div class="drawer-cta">
+        <a href="#contact" class="cta cta_contact cta_contact-icon">CONTACT</a>
+      </div><!-- drawer-cta -->
+    </div><!-- js-drawer-content__items -->   
+  </div><!-- js-drawer-content -->
+  <div class="js-drawer-background"></div>
+
+  <main class="main">
+    <div class="main-deco"><img src="./images/main/main-deco.png" alt="背景の模様"></div>
+    <div class="main__content">
+      <div class="main__title-content">
+        <p class="main__title_top">ADVANCED</p>
+        <p class="main__title_center">CREATION<span>&nbsp;FOR</span></p>
+        <p class="main__title_bottom">ENTERTAINMENT</p>
+      </div><!-- main__title-content -->
+      <div class="main__news-content u-tab-up">
+        <ul class="main__news-items">
+          <a href="#" class="main__news-item news-card">
+            <li class="news-card__body">
+              <time class="news-card__date" datetime="2022-10-01">
+                <span class="news-card__month">OCTOBER</span>
+                <span class="news-card__day">01</span>
+                <span class="news-card__year">2022</span>
+              </time>
+              <p class="news-card__text">お知らせが入りますお知らせが入ります</p>
+            </li>
+          </a><!-- news-card -->
+          <a href="#" class="main__news-item news-card">
+            <li class="news-card__body">
+              <time class="news-card__date" datetime="2022-10-01">
+                <span class="news-card__month">OCTOBER</span>
+                <span class="news-card__day">01</span>
+                <span class="news-card__year">2022</span>
+              </time>
+              <p class="news-card__text">お知らせが入りますお知らせが入りますお知らせが入ります</p>
+            </li>
+          </a><!-- news-card -->
+        </ul><!-- main__news-items -->
+        <div class="news-btn">
+          <a href="#" class="btn-sm btn-sm__arrow">VIEW MORE</a>
+        </div>
+      </div><!-- main-news-content -->
+    </div><!-- main__content -->
+    <div class="loop-anime">
+      <div class="loop-anime__wrap">
+        <div class="loop-anime__img"></div>
+      </div>
+    </div><!-- loop-anime -->
+  </main>
+
+  <section class="news u-tab-down">
+    <div class="news__inner inner">
+      <ul class="news__items">
+        <a href="#" class="news__item news-card">
+          <li class="news-card__body">
+            <time class="news-card__date" datetime="2022-10-01">
+              <span class="news-card__month">OCTOBER</span>
+              <span class="news-card__day">01</span>
+              <span class="news-card__year">2022</span>
+            </time>
+            <p class="news-card__text">お知らせが入りますお知らせが入ります</p>
+          </li>
+        </a><!-- news-card -->
+        <a href="#" class="news__item news-card">
+          <li class="news-card__body">
+            <time class="news-card__date" datetime="2022-10-01">
+              <span class="news-card__month">OCTOBER</span>
+              <span class="news-card__day">01</span>
+              <span class="news-card__year">2022</span>
+            </time>
+            <p class="news-card__text">お知らせが入りますお知らせが入ります</p>
+          </li>
+        </a><!-- news-card -->
+      </ul><!-- news-items -->
+      <div class="news__btn">
+        <a href="#" class="btn-sm btn-sm__arrow">VIEW MORE</a>
+      </div>
+    </div><!-- inner -->
+  </section><!-- news -->
+
+  <section id="mission" class="mission">
+    <div class="mission-deco"><img src="./images/mission/mission-deco.png" alt="背景の模様"></div>
+    <div class="mission__inner">
+      <div class="mission-anime wow bounceInRight" data-wow-delay="0.2s" data-wow-duration="2s">
+        <img src="./images/mission/mission-anime01.png" alt="キャラクターの画像">
+      </div>
+      <div class="mission__media media">
+        <figure class="media__img-wrapper">
+          <img src="./images/mission/mission01.jpg" alt="パチンコ台の写真" class="media__img">
+        </figure>
+        <div class="media__body">
+          <h2 class="media__title section-title">
+            <p class="section-title__text js-roll-text">
+              <span class="section-title__text-head text-head_mission">M</span>
+              <span>I</span>
+              <span>S</span>
+              <span>S</span>
+              <span>I</span>
+              <span>O</span>
+              <span>N</span>
+            </p>
+            <p class="section-subtitle subtitle-deco_mission">ミッション</p>
+          </h2><!-- section-title -->
+          <h3 class="media__lead section__lead">エンターテイメントを<br class="u-pc">愛する<br class="u-pc-down">全ての人を幸せに</h3>
+          <div class="media__text">
+            株式会社ACEはパチスロを中心とした遊技機の企画と開発をおこなっています。当社は社員全員がパチスロユーザー当事者。ユーザー目線を大切にした本当に楽しい機種の開発は当社ならではです。パチスロを愛する当事者として、エンターテイメントを愛する全ての人の幸せに貢献します。
+          </div>
+          <div class="section-btn">
+            <a href="#" class="btn btn_mission btn__bg-centerOut btn__arrow-right"><span>VIEW MORE</span></a>
+          </div>
+        </div><!-- /.media__body -->
+      </div><!-- /.media -->
+    </div><!-- inner -->
+  </section>
+
+  <section id="service" class="service">
+    <div class="service-deco"><img src="./images/service/service-deco.png" alt="背景の模様"></div>
+    <div class="service__inner">
+      <div class="service-anime wow bounceInLeft" data-wow-delay="0.2s" data-wow-duration="1.8s">
+        <img src="./images/service/service-anime01.png" alt="キャラクターの画像">
+      </div>
+      <div class="service__media media media_reverse">
+        <figure class="media__img-wrapper">
+          <img src="./images/service/service01.jpg" alt="スロット台の写真" class="media__img">
+        </figure>
+        <div class="media__body">
+          <h2 class="media__title section-title">
+            <p class="section-title__text js-roll-text">
+              <span class="section-title__text-head text-head_service">S</span>
+              <span>E</span>
+              <span>R</span>
+              <span>V</span>
+              <span>I</span>
+              <span>S</span>
+              <span>E</span>
+            </p>
+            <p class="section-subtitle subtitle-deco_service">サービス</p>
+          </h2><!-- section-title -->
+          <h3 class="media__lead section__lead">遊戯機開発を一気通貫で</h3>
+          <div class="media__text">当社はパチスロ機開発の全工程を一気通貫で行える社内体制があります。楽しさの肝を抑えた企画や演出、高い開発力を持つエンジニア、高精度かつスピーディーな開発を実現する独自の開発ツールなど、当社ならではの武器を活かし満足度の高いパチスロ機開発を実現します。</div>
+          <div class="section-btn">
+            <a href="#" class="btn btn_service btn__bg-centerOut btn__arrow-right"><span>VIEW MORE</span></a>
+          </div>
+        </div><!-- /.media__body -->
+      </div><!-- /.media -->
+    </div><!-- inner -->
+  </section>
+
+  <section id="company" class="company">
+    <div class="company-deco"><img src="./images/company/company-deco.png" alt="背景の模様"></div>
+    <div class="company__inner">
+      <div class="company-anime wow bounceIn" data-wow-delay="0.2s" data-wow-duration="1.8s">
+        <img src="./images/company/company-anime01.png" alt="キャラクターの写真">
+      </div>
+      <div class="company-media__body-bg"></div>
+      <div class="company-media media">
+        <figure class="company-media__img-wrapper media__img-wrapper">
+          <img src="./images/company/company01.jpg" alt="社内の風景" class="media__img">
+        </figure>
+        <div class="company__body media__body">
+          <h2 class="company__section-title media__title section-title">
+            <p class="section-title__text js-roll-text">
+              <span class="section-title__text-head text-head_company">C</span>
+              <span>O</span>
+              <span>M</span>
+              <span class="l-space">P</span>
+              <span>A</span>
+              <span>N</span>
+              <span>Y</span>
+            </p>
+            <p class="section-subtitle subtitle-deco_company">会社概要</p>
+          </h2><!-- section-title -->
+          <h3 class="company__lead media__lead section__lead"><span>これからも</span><span>パチスロと共に</span></h3>
+          <div class="company__media-text media__text">
+            当社は2012年の設立以来、パチスロ機をはじめとする遊技機開発を請け負ってきました。 2018年に企画から開発、申請まで全て自社内でできる体制が整い、今では多くのメーカー様の機種の開発を一気通貫で担当しています。
+          </div><!-- media__text -->
+          <div class="company-btn section-btn">
+            <a href="#" class="btn btn_company btn__bg-centerOut btn__arrow-right"><span>VIEW MORE</span></a>
+          </div>
+        </div><!-- /.media__body -->
+      </div><!-- /.media -->
+    </div><!-- inner -->
+  </section>
+
+  <section id="works" class="works">
+    <div class="works__inner">
+      <div class="works__media media media_reverse">
+        <figure class="works-media__img-wrapper media__img-wrapper">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="works-slide__wrapper">
+                  <img src="./images/works/works01.png" alt="開発実績1" class="works-slide__img">
+                </div>
+              </div><!-- swiper-slide -->
+              <div class="swiper-slide">
+                <div class="works-slide__wrapper">
+                  <img src="./images/works/works02.png" alt="開発実績2" class="works-slide__img">
+                </div>
+              </div><!-- swiper-slide -->
+              <div class="swiper-slide">
+                <div class="works-slide__wrapper">
+                  <img src="./images/works/works01.png" alt="開発実績3" class="works-slide__img">
+                </div>
+              </div><!-- swiper-slide -->
+              <div class="swiper-slide">
+                <div class="works-slide__wrapper">
+                  <img src="./images/works/works02.png" alt="開発実績4" class="works-slide__img">
+                </div>
+              </div><!-- swiper-slide -->
+            </div><!-- swiper-wrapper -->
+          </div><!-- swiper -->
+          <div class="works__ctrl-wrapper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div><!-- works__ctrl-wrapper -->
+        </figure><!-- media__img-wrapper -->
+        <div class="works-media__body media__body">
+          <h2 class="media__title section-title">
+            <p class="works-title__text section-title__text js-roll-text">
+              <span class="section-title__text-head text-head_works">W</span>
+              <span>O</span>
+              <span>R</span>
+              <span>K</span>
+              <span>S</span>
+            </p>
+            <p class="section-subtitle subtitle-deco_works">開発実績</p>
+          </h2><!-- section-title -->
+          <h3 class="works__lead media__lead section__lead">有名タイトルの開発実績多数</h3>
+          <div class="works__text media__text">サミー様のガメラ、七匠様のアカメが斬るなど、有名タイトルの開発も多数担当しています。担当させていただくメーカー様は幅広く、「ユーザーが本当に楽しめる機種を作りたい」
+          という思いにお応えしています。</div>
+          <div class="section-btn">
+            <a href="#" class="btn btn_works btn__bg-centerOut btn__arrow-right"><span>VIEW MORE</span></a>
+          </div>
+        </div><!-- /.media__body -->
+      </div><!-- /.media -->
+    </div><!-- inner -->
+  </section>
+
+  <section id="recruit" class="recruit">
+    <div class="recruit-deco"><img src="./images/recruit/recruit-deco.png" alt="背景の模様"></div>
+    <div class="recruit__head">
+      <div class="recruit__head-inner inner">
+        <div class="recruit__head-content">
+          <h2 class="recruit__title section-title">
+            <p class="recruit-subtitle section-subtitle">新卒・中途採用</p>
+            <p class="recruit-title__text section-title__text js-roll-text">
+              <span>R</span>
+              <span>E</span>
+              <span>C</span>
+              <span>R</span>
+              <span>U</span>
+              <span>I</span>
+              <span>T</span>
+            </p>
+          </h2><!-- section-title -->
+          <h3 class="section__lead section__lead_lg">「パチスロが好きだ」<br>とみんなで叫ぼう</h3>
+        </div>
+      </div><!-- inner -->
+    </div><!-- recruit__head -->
+    <div class="recruit__bottom">
+      <div class="recruit__bottom-inner inner">
+        <div class="recruit__bottom-text">
+          <p>当社で働いている社員は全員がパチスロを打つのが好き。自分がパチスロが好きだからこそ面白い機種を作れる、面白さを追求できるという信念から、当社では「パチスロが好きなこと」を第一条件に採用活動を行なっています。好きを仕事にできる株式会社
+          ACEの仲間になりませんか。</p>
+        </div>
+        <div class="recruit__bottom-content">
+          <div class="recruit__bottom-images">
+            <figure class="recruit__img-wrapper"><img src="./images/recruit/recruit01.jpg" alt="社内の風景1"></figure>
+            <figure class="recruit__img-wrapper"><img src="./images/recruit/recruit02.jpg" alt="社内の風景2"></figure>
+          </div><!-- recruit__bottom-images -->
+          <ul class="recruit__bottom-links vertical-links">
+            <li class="recruit__bottom-link vertical-link">
+              <a href="#">
+                <div class="recruit__anime-wrapper vertical-link__img-wrapper wow bounce" data-wow-delay="0.2s" data-wow-iteration="3">
+                  <img src="./images/recruit/recruit-anime01.png" alt="代表者メッセージ">
+                </div>
+                <span>代表者メッセージ</span>
+              </a>
+            </li>
+            <li class="recruit__bottom-link vertical-link">
+              <a href="#">
+                <div class="recruit__anime-wrapper_sm vertical-link__img-wrapper">
+                  <img src="./images/recruit/recruit-anime02.png" alt="働く環境">
+                </div>
+                <span>働く環境</span>
+              </a>
+            </li>
+            <li class="recruit__bottom-link vertical-link">
+              <a href="#">
+                <div class="recruit__anime-wrapper vertical-link__img-wrapper wow tada" data-wow-delay="0.8s" data-wow-iteration="3">
+                  <img src="./images/recruit/recruit-anime03.png" alt="仕事を知る">
+                </div>
+                <span>仕事を知る</span>
+              </a>
+            </li>
+            <li class="recruit__bottom-link vertical-link">
+              <a href="#">
+                <div class="recruit__anime-wrapper vertical-link__img-wrapper">
+                  <img src="./images/recruit/recruit-anime04.png" alt="社員を知る">
+                </div>
+                <span>社員を知る</span>
+              </a>
+            </li>
+            <li class="recruit__bottom-link vertical-link">
+              <a href="#">
+                <div class="recruit__anime-wrapper vertical-link__img-wrapper wow pulse" data-wow-delay=".5s" data-wow-iteration="3">
+                  <img src="./images/recruit/recruit-anime05.png" alt="写真ギャラリー">
+                </div>
+                <span>写真ギャラリー</span>
+              </a>
+            </li>
+            <li class="recruit__bottom-link vertical-link">
+              <a href="#">
+                <div class="recruit__anime-wrapper_sm vertical-link__img-wrapper wow shake" data-wow-delay="1s" data-wow-iteration="3">
+                  <img src="./images/recruit/recruit-anime06.png" alt="募集要項">
+                </div>
+                <span>募集要項</span>
+              </a>
+            </li>
+          </ul><!-- recruit__bottom-links -->
+        </div><!-- recruit__bottom-content -->
+      </div><!-- inner -->
+    </div><!-- recruit__bottom -->
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer__logo logo">
+        <a href="#"><img src="./images/common/logo.png" alt="株式会社ACE"></a>
+      </div>
+      <div class="footer__address">
+        <p>〒103-0006</p>
+        <p>東京都中央区日本橋富沢町6-4</p>
+        <p>RENOBLE NINGYOCHO 6F</p>
+      </div>
+      <p class="footer__phone u-xl">TEL.03-4400-6633</p>
+      <ul class="footer__privacy-links">
+        <li class="footer__privacy-link">
+          <a href="#">プライバシーポリシー</a>
+        </li>
+        <li class="footer__privacy-link">
+          <a href="#">サイトマップ</a>
+        </li>
+      </ul>
+      <div class="footer-copy copylight">Copyright &copy; 株式会社ACE All rights reserved.</div>
+      <div class="footer-content__cta">
+        <p class="footer__cta_phone tel-number"><a href="tel:03-4400-6633"><span>TEL.</span>03-4400-6633</a></p>
+        <div class="footer-cta">
+          <a href="#contact" class="cta cta_contact cta_contact-icon">CONTACT</a>
+        </div><!-- footer-cta -->
+      </div>
+      <nav nav class="footer-nav global-nav" aria-label="footer">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#mission">ACEとは</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#service">事業内容</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#works">制作実績</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#company">会社概要</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#recruit">採用情報</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav><!-- footer-nav -->
+    </div>
+  </footer>
+
+  <!-- floating -->
+  <div id="floating" class="floating js-floating">
+    <a class="floating__link" href="#"></a>
+  </div>
+  
+  <!-- Adbe Fonts -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'mrz4zbp',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'mrz4zbp',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'mrz4zbp',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+    </script>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- Swiper -->
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script defer src="./js/swiper.js"></script>
+  <!-- WOW -->
+  <script src="./js/wow.min.js"></script>
+  <script defer src="./js/script.js"></script>
+</body>
+</html>

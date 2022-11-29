@@ -1,0 +1,145 @@
+@use "global" as *;
+
+.media {
+  display: flex;
+  flex-direction: column-reverse;
+  
+  @include mq('lg') {
+    flex-direction: row;
+  }
+}
+
+.media__img-wrapper {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+  margin-left: calc(50% - 50vw);
+
+  
+  @include mq('lg') {
+    margin-bottom: 0;
+    border-top-right-radius: 110px;
+    border-bottom-right-radius: 110px;
+    width: 50%;
+    max-height: 600px;
+    margin-right: 4.27777%;
+  }
+  
+  @include mq('xl') {
+    border-top-right-radius: 160px;
+    border-bottom-right-radius: 160px;
+  }
+}
+
+.media__img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media__body {
+  flex: 1;
+  margin-bottom: 40px;
+
+  > :last-child {
+    margin-bottom: 0; //最後の要素の余白をリセット
+  }
+
+  @include mq('lg') {
+    margin-bottom: 0;
+    margin-right: 9%;
+  }
+
+  @include mq('xl') {
+    margin-right: 16.33333%;
+  }
+}
+
+.media__title {
+  margin-bottom: 40px;
+
+  @include mq('lg') {
+    margin-bottom: 50px;
+  }
+}
+
+.media__lead {
+  margin-bottom: 40px;
+  span {
+    display: inline-block;
+  }
+  
+  @include mq('lg') {
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+}
+
+.media__text {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 2.06;
+  letter-spacing: .015em;
+  margin-bottom: 40px;
+  
+  @include mq('md') {
+    font-size: 18px;
+  }
+  
+  @include mq('lg') {
+    margin-bottom: 50px;
+    padding-left: 10px;    
+  }
+}
+
+/* 左右逆レイアウト */
+.media_reverse {
+  
+  @include mq('lg') {
+    flex-direction: row-reverse;
+  }
+
+  .media__img-wrapper {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-left: 0;
+    margin-right: calc(50% - 50vw);
+
+  @include mq('lg') {
+      border-top-left-radius: 110px;
+      border-bottom-left-radius: 110px;
+      margin-left: 4.27777%;
+    }
+  
+    @include mq('xl') {
+      border-top-left-radius: 160px;
+      border-bottom-left-radius: 160px;
+    }
+  }
+
+  .media__text {
+    @include mq('lg') {
+      margin-right: 0;
+    }
+
+    @include mq('xl') {
+      margin-right: 0;
+    }
+  }
+  
+  .media__body {
+    
+    @include mq('lg') {
+      margin-right: 0;
+      margin-left: 9%;
+    }
+  
+    @include mq('xl') {
+      margin-right: 0;
+      margin-left: 16.333333%;
+    }
+  }
+}

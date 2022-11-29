@@ -1,0 +1,9 @@
+@use "global" as *;
+.section-btn {
+  text-align: center;
+
+  @include mq('lg') {
+    text-align: left;
+    padding-left: 10px;
+  }
+}

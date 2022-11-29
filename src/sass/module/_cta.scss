@@ -1,0 +1,41 @@
+@use "global" as *;
+.cta {
+  display: inline-block;
+  width: rem(222);
+  max-width: 100%;
+  padding: rem(18.5) rem(10) rem(18.5) rem(35);
+  border: 1px solid transparent;
+  color: $color-text-base;
+  font-size: rem(23);
+  font-family: $font-family-english;
+  font-weight: 500;
+  font-stretch: condensed;
+  font-style: normal;
+  letter-spacing: .015em;
+  line-height: 1;
+  border-radius: 100vh;
+  transition: all 0.3s ease 0s;
+}
+
+.cta_contact {
+  background-color: #eebb1d;
+  border: none;
+
+  &:focus,
+  &:hover {
+    opacity: $hover-opacity;
+  }
+
+  &::before {
+    display: inline-block;
+    margin-right: .92em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+}
+
+.cta_contact-icon {
+  &::before {
+    content: '\f0e0';
+  }
+}

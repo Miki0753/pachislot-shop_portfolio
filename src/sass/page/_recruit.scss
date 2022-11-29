@@ -1,0 +1,222 @@
+@use "global" as *;
+.recruit {
+  position: relative;
+  @include mq('md') {
+    margin-bottom: 174px;
+  }
+}
+
+/* 斜線の背景 */
+.recruit-deco {
+  position: absolute;
+  top: 101px;
+  right: 0;
+  width: 96.89vw;
+  height: 100%;
+  z-index: 1;
+
+  @include mq('md') {
+    top: 150px;
+  }
+
+  @include mq('lg') {
+    top: 0;
+  }
+}
+
+.recruit__head {
+  background: url(../../../images/recruit/recruit-bg.jpg) no-repeat left 45% center / cover;
+  width: 100%;
+  height: 556px;
+  position: relative;
+  margin-bottom: 60px;
+  
+  @include mq('sm') {
+    background: url(../../../images/recruit/recruit-bg.jpg) no-repeat left 33% center / cover;
+  }
+  
+  @include mq('md') {
+    background: url(../../../images/recruit/recruit-bg.jpg) no-repeat center center / cover;
+  }
+
+/* オーバーレイ */
+  &::after {
+    background: rgba(0, 0, 0, 0.6);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.recruit__head-inner {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recruit__head-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.recruit__title {
+  display: block;
+  min-width: auto;
+  margin: 0 auto;
+}
+
+/* レイアウト */
+.recruit-title__text {
+  justify-content: center;
+  margin-right: 0;
+  margin-bottom: 50px;
+  
+  @include mq('md') {
+    margin-bottom: 110px;    
+  }
+
+  span {
+    align-self: auto;
+    &:not(:first-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.recruit-subtitle {
+  margin-bottom: 21px;
+}
+
+/* 文字のスタイル */
+.recruit-title__text,
+.recruit-subtitle {
+  color: #fff;
+}
+
+.recruit-title__text {
+  font-size: 70px;
+}
+
+.recruit-subtitle {
+  &::before {
+    display: none;
+  }
+}
+
+.recruit__lead {
+
+}
+
+.recruit__bottom-inner {
+
+  @include mq('md') {
+    max-width: 600px + strip-unit($padding-pc) * 2;
+  }
+
+  @include mq("lg") {
+    max-width: 1400px + strip-unit($padding-pc) * 2;
+  }
+}
+
+.recruit__bottom-text {
+  max-width: 747px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #333333;
+  position: relative;
+  z-index: 2;
+
+  @include mq('lg') {
+    margin-bottom: 90px;
+  }
+}
+
+.recruit__bottom-content {
+
+  @include mq('lg') {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.recruit__bottom-images {
+  margin-bottom: 60px;
+  
+  @include mq('lg') {
+    margin-bottom: 0;
+    flex: 0 1 36.85714%;
+    margin-right: 15.64285%;
+  }
+}
+
+.recruit__img-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 30px;
+  
+  &:first-child {
+    margin-bottom: 30px;
+    
+    @include mq('lg') {
+      border-radius: 0;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      max-width: 516px;
+      margin-bottom: 9px;
+    }
+  }
+  
+  &:last-child {
+    
+    @include mq('lg') {
+      border-radius: 0;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      max-width: 516px;
+      margin-left: 25.19379%;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.recruit__bottom-links {
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+
+  @include mq('lg') {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.recruit__anime-wrapper {
+
+  img {
+    width: 76px;
+    height: 91px;
+    object-fit: contain;
+  }
+}
+
+.recruit__anime-wrapper_sm {
+
+  img {
+    width: 49px;
+    height: 70px;
+    object-fit: contain;
+  }
+}

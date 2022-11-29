@@ -1,0 +1,89 @@
+@use "global" as *;
+.service {
+  position: relative;
+
+  @include mq('md') {
+    margin-bottom: 168px;
+  }
+}
+
+/* 斜線の背景 */
+.service-deco {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 49.77777vw;
+  height: 100%;
+  z-index: -1;
+
+@include mq('md') {
+  top: 210px;
+}
+
+  @include mq('lg') {
+    top: -90px;
+    z-index: 1;
+  }
+}
+
+.service__inner {
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  width: 100%;
+
+  @include mq('sm') {
+    max-width: 600px + strip-unit($padding-pc) * 2;
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+
+  @include mq('lg') {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* キャラクター配置 */
+.service-anime {
+  width: 13vw;
+  height: 20.5vw;
+  position: absolute;
+  bottom: -10vw;
+  right: 65vw;
+
+  @include mq('sm') {
+    width: 9.98vw;
+    height: 15.77vw;
+    bottom: -7vw;
+    right: 66vw;
+  }
+
+  @include mq('md') {
+    width: 12.35vw;
+    height: 19.5vw;
+    bottom: -10vw;
+    right: 60vw;
+  }
+
+  @include mq('lg') {
+    width: 6.2vw;
+    height: 9.8vw;
+    bottom: -3vw;
+    right: 35vw;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.service__media {
+  .media__body {
+    position: relative;
+    z-index: 2;
+  }
+}

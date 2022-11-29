@@ -1,0 +1,175 @@
+@use "sass:math";
+
+// インナー幅
+$inner: 1200px;
+
+// 余白
+$padding-pc: 25px;
+$padding-tab: 24px;
+$padding-sp: 16px;
+
+// ヘッダー高さ
+$header-height-pc: 180px;
+$header-height-md: 150px;
+$header-height-sp: 120px;
+
+// フォント
+$font-family-default: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif; 
+$font-family-english: 'Barlow Condensed', sans-serif;
+$font-family-base: $font-family-default;
+$font-size-base: 16px;
+$font-weight-base: 500;
+$letter-spacing-base: 0.015em;
+$line-height-base: 2.06;
+
+// フォントウェイト
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600; 
+$font-bold: 700;
+
+//ラインハイト
+$leading-none: 1;
+$leading-x-tight: 1.25;
+$leading-tight: 1.5;
+$leading-snug: 1.6;
+$leading-normal: 1.7;
+$leading-relaxed: 1.8;
+$leading-loose: 2;
+
+// 色
+$color-accent: #ea5413; //アクセント色
+$color-bg-base: #FFF; //背景色
+$color-text-base: #000000; //メインテキスト色
+$hover-opacity: 0.6; //透過度
+
+// 階層
+$layer-modal: 100;
+$layer-drawer: 40;
+$layer-floating: 30;
+$layer-header: 20;
+$layer-footer: 10;
+$layer-default: 1;
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+//メディアクエリー
+$mediaquerys: (
+  sm-down: "screen and (max-width: #{map-get($breakpoints,'sm')} - 1px)",
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md-down: "screen and (max-width: #{map-get($breakpoints,'md')} - 1px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg-down: "screen and (max-width: #{map-get($breakpoints,'lg')} - 1px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+// 非表示
+.u-sp-down {
+  
+  @include mq('sm') {
+    display: none;
+  }
+}
+
+.u-sp {
+
+  @include mq('md') {
+    display: none;
+  }
+}
+
+.u-sp-up {
+  display: none;
+  @include mq('sm') {
+    display: block;
+  }
+}
+
+.u-tab-down {
+  @include mq('md') {
+    display: none;
+  }
+}
+
+.u-tab {
+  display: none;
+  @include mq('md') {
+    display: block;
+  }
+
+  @include mq('xl') {
+    display: none;
+  }
+}
+
+.u-tab-up {
+  display: none;
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.u-pc-down {
+  
+  @include mq('lg') {
+    display: none;
+  }
+}
+
+.u-pc {
+  display: none;
+  @include mq('lg') {
+    display: block;
+  }
+}
+
+.u-xl {
+  display: none;
+  @include mq('xl') {
+    display: block;
+  }
+}
+
+// リンク位置調整
+.link-space {
+  padding-top: 60px;
+  margin-top: -60px;
+  
+  @include mq('md') {
+    padding-top: 80px;
+    margin-top: -80px;
+  }
+  
+  @include mq('xl') {
+    padding-top: 120px;
+    margin-top: -120px;
+  }
+}
+
+section {
+  margin-bottom: 100px;
+  
+  @include mq('md') {
+      margin-bottom: 168px;
+    }
+}
+

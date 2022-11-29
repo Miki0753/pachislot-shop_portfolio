@@ -1,0 +1,41 @@
+@use "global" as *;
+.vertical-links {
+  width: 100%;
+  margin-bottom: -7px;
+}
+
+.vertical-link {
+  margin-bottom: 7px;
+
+  a {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+
+    &:hover,
+    &:focus {
+      opacity: $hover-opacity;
+    }
+  }
+
+  span {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    color: #333333;
+  }
+}
+
+/* 画像が入るBOX */
+.vertical-link__img-wrapper {
+  width: 76px;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+
+  @include mq('sm') {
+    margin-right: 25px;
+  }
+}

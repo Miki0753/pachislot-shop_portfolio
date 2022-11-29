@@ -1,0 +1,15 @@
+@use "global" as *;
+.tel-number {
+  cursor: pointer;
+
+  /* md以上電話発信なし */
+  @include mq('md') {
+    cursor: default;
+
+
+    a[href^="tel:"] {
+      //この記述が発信できない指定
+      pointer-events: none;
+    }
+  }
+}

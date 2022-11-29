@@ -1,0 +1,88 @@
+@use "global" as *;
+.floating {
+  position: fixed;
+  right: 20px;
+  bottom: 120px;
+  z-index: $layer-floating;
+  
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(150px);
+  
+  @include mq('sm') {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  /* 上に上がる動き */
+  &.UpMove {
+    animation-name: UpAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  /* 下に下がる動き */
+  &.DownMove {
+    animation-name: DownAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(150px);
+  }
+}
+
+.floating__link {
+  display: block;
+  transition: all 0.3s ease 0s;
+  width: 55px;
+  height: 55px;
+  border-radius: 100vh;
+  background-color: #ededed;
+  position: relative;
+  
+  @include mq('sm') {
+    width: 65px;
+    height: 65px;
+  }
+
+  &::before {
+    content: '\f106';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* ここからカスタマイズ */
+    font-size: 30px;
+    color: #268582;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: $hover-opacity;
+  }
+}

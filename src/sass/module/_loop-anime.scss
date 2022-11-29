@@ -1,0 +1,52 @@
+@use "global" as *;
+.loop-anime {
+  position: absolute;
+  bottom: -36%;
+  left: 0;
+
+  @include mq('sm') {
+    bottom: -19%;
+  }
+  
+  @include mq('md') {
+    bottom: -24%;
+    
+  }
+
+  @include mq('lg') {
+    bottom: -20%;
+  }
+}
+
+.loop-anime__wrap {
+  overflow: hidden;
+}
+
+/* ラッパーモジュールのスタイル */
+.loop-anime__wrap {
+  width: 100vw;
+  height: 262px;
+}
+
+/* スライドのスタイル */
+.loop-anime__img {
+  background: url(../../../images/main/main-anime.png) repeat-x 0 0 / contain;
+  width: auto;
+  height: 262px; // safari対策
+  flex-shrink: 0; // firefox対策
+}
+
+/* アニメーション */
+.loop-anime__img {
+  animation: loop-anime01 25s linear infinite;
+}
+
+@keyframes loop-anime01 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1164px 0;
+  }
+}

@@ -1,0 +1,32 @@
+@use "global" as *;
+.news {
+  margin-bottom: 120px;
+}
+
+.news__inner {
+
+  @include mq('sm') {
+    max-width: 600px + strip-unit($padding-pc) * 2;
+    margin: 0 auto;
+    
+  }
+}
+
+.news__items {
+  margin-bottom: 30px;
+}
+
+.news__item {
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.news__btn {
+  text-align: center;
+
+  @include mq('md') {
+    text-align: right;
+  }
+}

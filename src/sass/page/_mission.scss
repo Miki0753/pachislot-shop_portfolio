@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.mission {
+  position: relative;
+  @include mq('md') {
+    margin-bottom: 168px;
+  }
+}
+
+/* 斜線の背景 */
+.mission-deco {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+
+  @include mq('md') {
+    top: 60px;
+  }
+
+  @include mq('lg') {
+    z-index: 1;
+    top: 0;
+  }
+}
+
+.mission__inner {
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  width: 100%;
+  position: relative;
+  
+  @include mq('sm') {
+    max-width: 600px + strip-unit($padding-pc) * 2;
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+
+  @include mq('lg') {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* キャラクター配置 */
+.mission-anime {
+  width: 20vw;
+  height: 19.35vw;
+  position: absolute;
+  bottom: -7vw;
+  left: 10vw;
+
+  @include mq('sm') {
+    width: 15vw;
+    height: 14.5vw;
+    bottom: -10vw;
+    left: 16vw;
+  }
+
+  @include mq('md') {
+    width: 19vw;
+    height: 18.38vw;
+    bottom: -12vw;
+    left: 20vw;
+  }
+
+  @include mq('lg') {
+    width: 9.3vw;
+    height: 9vw;
+    bottom: 0vw;
+    left: 36vw;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.mission__media {
+
+  .media__body {
+    position: relative;
+    z-index: 2;
+  }
+}

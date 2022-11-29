@@ -1,0 +1,134 @@
+@use "global" as *;
+.btn {
+  display: inline-block;
+  width: rem(280);
+  max-width: 100%;
+  padding: rem(18) rem(10);
+  border: 2px solid transparent;
+  background-color: $color-bg-base;
+  color: $color-text-base;
+  font-size: rem(18);
+  font-family: $font-family-english;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: .015em;
+  line-height: 1;
+  border-radius: 100vh;
+  text-align: center;
+}
+
+.btn_mission {
+  border-color: #ea5413;
+}
+
+.btn_service {
+  border-color: #b7d442;
+}
+
+.btn_company {
+  border-color: #268582;
+}
+
+.btn_works {
+  border-color: #eebb1d;
+}
+
+
+/* ホバーアニメーション用スタイル */
+.btn {
+  position: relative; // アニメーションの起点
+  overflow: hidden;
+  
+  span {
+    transition: ease .2s;
+    position: relative; // z-index
+    z-index: 3; // 文字の階層
+  }
+
+  &:hover span {
+    color: #ffffff;
+  }
+}
+
+ // ホバー時の背景
+.btn__bg-centerOut {
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    // ホバー時のアニメーション
+    transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 0);
+    transform-origin: center;
+  }
+}
+
+.btn_mission {
+  
+  &::before {
+    background: #ea5413;
+  }
+}
+
+.btn_works {
+  
+  &::before {
+    background: #eebb1d;
+  }
+}
+.btn_service {
+  
+  &::before {
+    background: #b7d442;
+  }
+}
+
+.btn_company {
+  
+  &::before {
+    background: #268582;
+  }
+}
+
+ // ホバー時の背景
+.btn__bg-centerOut {
+
+  &:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+/* シェブロン */
+.btn__arrow-right {
+  position: relative;
+
+  &::after {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: rem(8);
+    position: absolute;
+    top: 50%;
+    right: 6.7%;
+    transform: translateY(-50%);
+    transition: ease .2s;
+    z-index: 3;
+    color: $color-text-base;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    color: #ffffff;
+  }
+}
+
+.btn__arrow-right {
+  &::after {
+    content: '\f054';
+  }
+}

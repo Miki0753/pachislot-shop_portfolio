@@ -1,0 +1,135 @@
+@use "global" as *;
+.works {
+}
+
+.works__inner {
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  width: 100%;
+
+  @include mq('sm') {
+    max-width: 600px + strip-unit($padding-pc) * 2;
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+
+  @include mq('lg') {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* レイアウト */
+.works-media__img-wrapper.media__img-wrapper {
+  margin-left: 0;
+
+  @include mq('lg') {
+    margin-top: 220px;
+  }
+
+  @include mq('xl') {
+    flex: 0 1 58.44444%;
+  }
+}
+
+/* 角丸打ち消し */
+.works-media__img-wrapper.media__img-wrapper {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+}
+
+.works-media__body {
+
+  @include mq('xl') {
+    flex: 1;
+  }
+}
+
+.works-title__text {
+  margin-right: 20px;
+
+  @include mq('sm') {
+    margin-right: 10px;
+  }
+
+  @include mq('md') {
+    margin-right: 33px;
+  }
+}
+
+.works__lead {
+  font-size: 24px;
+}
+
+.works__text {
+
+  @include mq('lg') {
+    padding-right: 15%;
+  }
+  
+  @include mq('xl') {
+    padding-right: 24.17355%;    
+  }
+}
+
+.works__btn {
+  
+}
+
+/* Swiperスタイル */
+.works-slide__img {
+  border-radius: 20px;
+
+  @include mq('md') {
+    border-radius: 30px;
+  }
+}
+
+.works__ctrl-wrapper {
+  width: 180px;
+  height: 45px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include mq('lg') {
+    width: 120px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+
+  &::after {
+    content: "";
+  }
+}
+
+.swiper-button-next {
+  &::after {
+    content: '';
+    width: 26px;
+    height: 26px;
+    border-top: 2px solid #eebb1d;
+    border-right: 2px solid #eebb1d;
+    transform: rotate(45deg) translateY(-40%);
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    content: '';
+    width: 26px;
+    height: 26px;
+    border-bottom: 2px solid #eebb1d;
+    border-left: 2px solid #eebb1d;
+    transform: rotate(45deg) translateY(-40%);
+  }
+}
+
